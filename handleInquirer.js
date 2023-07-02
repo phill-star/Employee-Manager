@@ -37,3 +37,13 @@ const userOptions = () => {
       },
     ]);
   };
+
+  const addDepartment = () => {
+    return inquirer.prompt([
+      {
+        name: 'depName',
+        message: 'What is the name of the department?',
+        type: 'input',
+      },
+    ]);
+  };
