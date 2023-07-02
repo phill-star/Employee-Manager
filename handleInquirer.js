@@ -16,3 +16,24 @@ db.connect((err) => {
   }
   console.log('Connected to the ' + process.env.DB_NAME + ' database.');
 });
+
+const userOptions = () => {
+    return inquirer.prompt([
+      {
+        name: 'optionTree',
+        message: 'What do you want to do?',
+        type: 'list',
+        choices: [
+          "View all Departments",
+          "View all Roles",
+          "View all Employees",
+          "Add a Department",
+          "Add a Role",
+          "Add an Employee",
+          "Update an Employee Role",
+          "Remove an Employee",
+          "Exit"
+        ]
+      },
+    ]);
+  };
