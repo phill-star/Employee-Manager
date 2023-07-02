@@ -67,3 +67,34 @@ const addRole = () => {
       },
     ]);
   };
+
+
+const addEmployee = () => {
+    return inquirer.prompt([
+      {
+        name: 'firstName',
+        message: 'What is their first name?',
+        type: 'input',
+      },
+      {
+        name: 'lastName',
+        message: 'What is their last name?',
+        type: 'input',
+      },
+      {
+        name: 'roleName',
+        message: 'What is their role ID?',
+        type: 'number',
+      },
+      {
+        name: 'managerName',
+        message: "What is their manager's ID?",
+        type: 'number',
+      },
+      {
+        name: 'depName',
+        message: 'What is their department ID?',
+        type: 'number',
+      },
+    ]);
+  };
