@@ -39,11 +39,31 @@ const userOptions = () => {
   };
 
   const addDepartment = () => {
+  return inquirer.prompt([
+    {
+      name: 'depName',
+      message: 'What is the name of the department?',
+      type: 'input',
+    },
+  ]);
+};
+
+const addRole = () => {
     return inquirer.prompt([
       {
-        name: 'depName',
-        message: 'What is the name of the department?',
+        name: 'roleName',
+        message: 'What is the name of this role?',
         type: 'input',
+      },
+      {
+        name: 'salary',
+        message: 'What is the hourly salary of this role?',
+        type: 'number',
+      },
+      {
+        name: 'depName',
+        message: "What is this role's department ID?",
+        type: 'number',
       },
     ]);
   };
