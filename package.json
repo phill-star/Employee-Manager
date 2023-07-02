@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "install": "^0.13.0"
+  },
+  "name": "employee-manager",
+  "description": "Track employees",
+  "version": "0.1.0",
+  "main": "Index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phill-star/Employee-Manager.git"
+  },
+  "author": "mohamed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phill-star/Employee-Manager/issues"
+  },
+  "homepage": "https://github.com/phill-star/Employee-Manager#readme"
+}
