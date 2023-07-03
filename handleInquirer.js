@@ -138,3 +138,16 @@ const addEmployee = () => {
     },
   ]);
 };
+
+const optionHandler = async () => {
+    let input = await userOptions();
+    switch (input.optionTree) {
+      case "View all Departments":
+        db.query('SELECT * FROM department_table', function (err, results) {
+          if (err) {
+            console.log(err);
+          }
+          console.table(results);
+        });
+        break;
+    }}
