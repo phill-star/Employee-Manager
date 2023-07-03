@@ -124,3 +124,17 @@ const addEmployee = () => {
     ]);
   };
   
+  const removeEmployee = () => {
+  return inquirer.prompt([
+    {
+      name: 'employeeSelection',
+      message: 'Select employee to remove via ID',
+      type: 'number',
+    },
+    {
+      name: 'confirmDelete',
+      message: 'Are you sure you want to remove this employee?',
+      type: 'confirm',
+    },
+  ]);
+};
