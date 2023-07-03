@@ -98,3 +98,29 @@ const addEmployee = () => {
       },
     ]);
   };
+
+  const updateEmployee = () => {
+    return inquirer.prompt([
+      {
+        name: 'employeeSelection',
+        message: 'Select employee to update via ID',
+        type: 'number',
+      },
+      {
+        name: 'newRole',
+        message: 'What is their new role ID?',
+        type: 'number',
+      },
+      {
+        name: 'managerSelection',
+        message: "What is their new manager's employee ID",
+        type: 'number',
+      },
+      {
+        name: 'newDep',
+        message: 'What is their new department ID?',
+        type: 'number',
+      },
+    ]);
+  };
+  
