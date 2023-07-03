@@ -150,4 +150,13 @@ const optionHandler = async () => {
           console.table(results);
         });
         break;
+        
+        case "View all Roles":
+            db.query('SELECT role_table.id AS role_id, role_table.role_name AS role_name, role_table.salary AS salary, department_table.department_name AS department_name FROM role_table JOIN department_table ON role_table.department_id = department_table.id', function (err, results) {
+              if (err) {
+                console.log(err);
+              }
+              console.table(results);
+            });
+            break;
     }}
