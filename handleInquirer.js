@@ -197,5 +197,27 @@ const optionHandler = async () => {
                 }
                 console.table(results);
             });
-            break;      
+            break;
+
+        case "Update an Employee Role":
+            let updateAnEmployee = await updateEmployee();
+            db.query(`UPDATE employee_table SET role_id = "${updateAnEmployee.newRole}" WHERE id = ?`, updateAnEmployee.employeeSelection, (err, result) => {
+              if (err) {
+                console.log(err);
+                }
+                console.log(result);
+            }); 
+            db.query(`UPDATE employee_table SET department_id = "${updateAnEmployee.newDep}" WHERE id = ?`, updateAnEmployee.employeeSelection, (err, result) => {
+                if (err) {
+                  console.log(err);
+                }
+                console.log(result);
+              });
+              db.query(`UPDATE employee_table SET department_id = "${updateAnEmployee.managerSelection}" WHERE id = ?`, updateAnEmployee.employeeSelection, (err, result) => {
+                if (err) {
+                  console.log(err);
+                }
+                console.log(result);
+              });
+              break;     
     }}
