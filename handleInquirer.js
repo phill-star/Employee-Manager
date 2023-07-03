@@ -169,15 +169,23 @@ const optionHandler = async () => {
                 });
                 break;
                 
-                case "Add a Department":
-                    let addNewDepartment = await addDepartment();
-                    db.query(`INSERT INTO department_table (department_name) VALUES ("${addNewDepartment.depName}")`, function (err, results) {
-                      if (err) {
-                        console.log(err);
-                      }
-                      console.table(results);
-                    });
-                    break;
-              
+            case "Add a Department":
+                let addNewDepartment = await addDepartment();
+                db.query(`INSERT INTO department_table (department_name) VALUES ("${addNewDepartment.depName}")`, function (err, results) {
+                  if (err) {
+                  console.log(err);
+                    }
+                  console.table(results);
+                })
+                break;
+            case "Add a Role":
+                let addNewRole = await addRole();
+                db.query(`INSERT INTO role_table (role_name, salary, department_id) VALUES ("${addNewRole.roleName}", ${addNewRole.salary}, ${addNewRole.depName})`, function (err, results) {
+                    if (err) {
+                    console.log(err);
+                    }
+                  console.table(results);
+                });
+                break;
               
     }}
