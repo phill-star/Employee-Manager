@@ -1,12 +1,15 @@
 {
   "dependencies": {
-    "install": "^0.13.0"
+    "dotenv": "^16.3.1",
+    "inquirer": "^8.2.4",
+    "install": "^0.13.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.4.5"
   },
   "name": "employee-manager",
   "description": "Track employees",
   "version": "0.1.0",
   "main": "Index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
