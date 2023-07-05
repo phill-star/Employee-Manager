@@ -1,7 +1,7 @@
-const {  optionHandler  } = require('handleInquirer')
+const { optionHandler } = require('./handleInquirer.js');
 
 async function init() {
-    await optionHandler();
+  await optionHandler();
 }
 
 init();
